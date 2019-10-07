@@ -1,22 +1,102 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto&display=swap');
+:root {
+  --header-margin-width: 15px; /* the margin above and below "name" in the header */
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background: hsl(48, 100%, 99%);
+}
+h1 {
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 3em;
   text-align: center;
+  text-shadow: 2px 1px chartreuse, -2px -1px red;
+  padding: 0 1em 0 1em;
 }
-
-.App-logo {
-  height: 40vmin;
+p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin-bottom: 40px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+p.summary {
+  font-size: 1em;
+  text-align: justify;
+  font-style: italic;
 }
-
-.App-link {
-  color: #09d3ac;
+img {
+  height: 30px;
+  margin: 0px 20px 0px 0px;
+}
+a {
+  text-decoration: none;
+}
+#header {
+  background: hsl(48, 100%, 99%);
+  width: 100%;
+  top: 0;
+  left: 0; 
+  right: 0;
+  position: fixed;
+  transition: top 0.4s;
+}
+#menu-container {
+  width: 100%;
+  max-width: 500px;
+  left: 0;
+  right: 0;
+  margin: auto auto auto auto;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-evenly;
+}
+.menu-item {
+  padding: 10px 10px 10px 10px;
+}
+.menu-item:hover {
+  background: hsl(0, 0%, 90%);
+}
+#divider-menu {
+  width: 100%;
+  height: 1px;
+  background: hsl(0, 0%, 10%);
+}
+.divider-content {
+  width: 30%;
+  height: 1px;
+  background: hsl(0, 0%, 80%);
+  margin: 20px 0px 20px 0px;
+}
+#content {
+  color: hsl(0, 0%, 15%);
+  padding: 3em 5em 0 5em;
+  margin: auto auto auto auto;
+  max-width: 1000px;
+}
+#about-top, #about-bottom {
+  transition: top 0.4s;
+}
+.arrow {
+  color: inherit;
+  text-align: right;
+  text-shadow: 1px 0px chartreuse, -1px 0px red;
+}
+.project {
+  margin-bottom: 40px;
+  padding: 10px 20px 20px 0px;
+}
+.blue-link {
+  color: dodgerblue;
+}
+.blue-link:hover {
+  text-decoration: underline;
+}
+/* For mobile screens */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  #content {
+    padding: 1em 1em 0 1em;
+  }
 }
