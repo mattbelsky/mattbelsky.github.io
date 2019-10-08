@@ -331,6 +331,10 @@ class Root extends React.Component {
     //   parseInt(windowHeight) > heightAboveContent ? windowHeight + "px" : heightAboveContent + "px";
   }
   
+  componentDidUpdate() {
+    window.scrollTo(0, 0);
+  }
+  
   componentWillUnmount() {
     window.removeEventListener("scroll", this.handleScroll);
   }
